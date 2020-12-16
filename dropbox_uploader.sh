@@ -1608,12 +1608,12 @@ else
     url="${API_OAUTH_AUTHORIZE}?client_id=${OAUTH_APP_KEY}&token_access_type=offline&response_type=code"
     echo -ne "  Open the following URL in your Browser and allow suggested permissions: ${url}\n"
 #    echo -ne " Please provide the access code: "
-#    read -r access_code
+#    read -r OAUTH_REFRESH_TOKEN
 
     echo -ne "\n > App key: ${OAUTH_APP_KEY}\n"
     echo -ne " > App secret: '${OAUTH_APP_SECRET}\n"
-	echo -ne " > !!!3333!!! Access code: '${access_code}'"
-#    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
+	echo -ne " > !!!3333!!! Access code: '${OAUTH_REFRESH_TOKEN}'"
+#    echo -ne " > Access code: '${OAUTH_REFRESH_TOKEN}'. Looks ok? [y/N]: "
 #    read -r answer
 #    if [[ $answer != "y" ]]; then
 #        remove_temp_files
@@ -1627,7 +1627,7 @@ else
     echo "CONFIGFILE_VERSION=2.0" > "$CONFIG_FILE"
     echo "OAUTH_APP_KEY=$OAUTH_APP_KEY" >> "$CONFIG_FILE"
     echo "OAUTH_APP_SECRET=$OAUTH_APP_SECRET" >> "$CONFIG_FILE"
-    echo "OAUTH_REFRESH_TOKEN=$access_code" >> "$CONFIG_FILE"
+    echo "OAUTH_REFRESH_TOKEN=$OAUTH_REFRESH_TOKEN" >> "$CONFIG_FILE"
     echo "   The configuration has been saved."
 	echo "$(<dropbox_uploader.cfg )"
 
