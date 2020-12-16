@@ -1606,8 +1606,8 @@ else
 
     url="${API_OAUTH_AUTHORIZE}?client_id=${OAUTH_APP_KEY}&token_access_type=offline&response_type=code"
     echo -ne "  Open the following URL in your Browser and allow suggested permissions: ${url}\n"
-    echo -ne " Please provide the access code: "
-    read -r access_code
+#    echo -ne " Please provide the access code: "
+#    read -r access_code
 
     echo -ne "\n > App key: ${OAUTH_APP_KEY}\n"
     echo -ne " > App secret: '${OAUTH_APP_SECRET}\n"
