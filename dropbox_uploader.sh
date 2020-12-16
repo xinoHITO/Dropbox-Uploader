@@ -1614,10 +1614,10 @@ else
 	echo -ne " > Access code: '${access_code}'"
 #    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
 #    read -r answer
-    if [[ $answer != "y" ]]; then
-        remove_temp_files
-        exit 1
-    fi
+#    if [[ $answer != "y" ]]; then
+#        remove_temp_files
+#        exit 1
+#    fi
 
     $CURL_BIN $CURL_ACCEPT_CERTIFICATES $API_OAUTH_TOKEN -d code=$access_code -d grant_type=authorization_code -u $OAUTH_APP_KEY:$OAUTH_APP_SECRET -o "$RESPONSE_FILE" 2>/dev/null
     check_http_response
