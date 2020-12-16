@@ -1596,11 +1596,13 @@ else
     echo -ne " Now, click on the \"Submit\" button.\n\n"
     echo -ne " 6) Now to tab \"settings\" and provide the following information:\n"
 
-    echo -ne " App key: "
-    read -r OAUTH_APP_KEY
+	echo -ne " App key: $OAUTH_APP_KEY"
+#    echo -ne " App key: "	
+#    read -r OAUTH_APP_KEY
 
-    echo -ne " App secret: "
-    read -r OAUTH_APP_SECRET
+    echo -ne " App secret: $OAUTH_APP_SECRET"
+#	echo -ne " App secret: "
+#    read -r OAUTH_APP_SECRET
 
     url="${API_OAUTH_AUTHORIZE}?client_id=${OAUTH_APP_KEY}&token_access_type=offline&response_type=code"
     echo -ne "  Open the following URL in your Browser and allow suggested permissions: ${url}\n"
