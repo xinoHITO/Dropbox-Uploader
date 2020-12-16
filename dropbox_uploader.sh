@@ -1611,7 +1611,7 @@ else
 
     echo -ne "\n > App key: ${OAUTH_APP_KEY}\n"
     echo -ne " > App secret: '${OAUTH_APP_SECRET}\n"
-	echo -ne " > !!!!!! Access code: '${access_code}'"
+	echo -ne " > !!!22!!! Access code: '${access_code}'"
 #    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
 #    read -r answer
 #    if [[ $answer != "y" ]]; then
@@ -1628,6 +1628,8 @@ else
     echo "OAUTH_APP_SECRET=$OAUTH_APP_SECRET" >> "$CONFIG_FILE"
     echo "OAUTH_REFRESH_TOKEN=$OAUTH_REFRESH_TOKEN" >> "$CONFIG_FILE"
     echo "   The configuration has been saved."
+	echo "$(<dropbox_uploader.cfg )"
+
 
     remove_temp_files
     exit 0
