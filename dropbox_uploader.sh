@@ -601,8 +601,6 @@ function db_simple_upload_file
     else
         print "FAILED\n"
 		print "$RESPONSE_FILE\n"
-		print "$(<{$RESPONSE_FILE} )"
-		echo "$(<{$RESPONSE_FILE} )"				
         print "An error occurred requesting /upload\n"
         ERROR_STATUS=1
     fi
@@ -1837,7 +1835,8 @@ esac
 remove_temp_files
 
 if [[ $ERROR_STATUS -ne 0 ]]; then
-    echo "Some error occured. rerun the script with \"-d\" option and check the output and logfile: $RESPONSE_FILE."
+    echo "Some error occured. rerun the script with \"-d\" option and check the output and logfile: $RESPONSE_FILE.\n"
+	echo "$(<{$RESPONSE_FILE} )"
 fi
 
 exit $ERROR_STATUS
