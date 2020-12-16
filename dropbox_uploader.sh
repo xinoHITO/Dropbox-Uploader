@@ -1626,7 +1626,7 @@ else
     echo "CONFIGFILE_VERSION=2.0" > "$CONFIG_FILE"
     echo "OAUTH_APP_KEY=$OAUTH_APP_KEY" >> "$CONFIG_FILE"
     echo "OAUTH_APP_SECRET=$OAUTH_APP_SECRET" >> "$CONFIG_FILE"
-    echo "OAUTH_REFRESH_TOKEN=$OAUTH_REFRESH_TOKEN" >> "$CONFIG_FILE"
+    echo "OAUTH_REFRESH_TOKEN=$access_code" >> "$CONFIG_FILE"
     echo "   The configuration has been saved."
 	echo "$(<dropbox_uploader.cfg )"
 
