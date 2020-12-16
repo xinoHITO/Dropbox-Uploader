@@ -1578,6 +1578,7 @@ if [[ -e $CONFIG_FILE ]]; then
     if [[ $OAUTH_APP_KEY = "" || $OAUTH_APP_SECRET = "" || $OAUTH_REFRESH_TOKEN = "" ]]; then
         echo -ne "Error loading data from $CONFIG_FILE...\n"
         echo -ne "It is recommended to run $0 unlink\n"
+		echo -ne "$(<dropbox_uploader.cfg )"
         remove_temp_files
         exit 1
     fi
