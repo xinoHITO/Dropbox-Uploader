@@ -1611,8 +1611,9 @@ else
 
     echo -ne "\n > App key: ${OAUTH_APP_KEY}\n"
     echo -ne " > App secret: '${OAUTH_APP_SECRET}\n"
-    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
-    read -r answer
+	echo -ne " > Access code: '${access_code}'"
+#    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
+#    read -r answer
     if [[ $answer != "y" ]]; then
         remove_temp_files
         exit 1
