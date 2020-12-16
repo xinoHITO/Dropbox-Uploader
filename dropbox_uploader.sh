@@ -1611,7 +1611,7 @@ else
 
     echo -ne "\n > App key: ${OAUTH_APP_KEY}\n"
     echo -ne " > App secret: '${OAUTH_APP_SECRET}\n"
-	echo -ne " > !!!22!!! Access code: '${access_code}'"
+	echo -ne " > !!!3333!!! Access code: '${access_code}'"
 #    echo -ne " > Access code: '${access_code}'. Looks ok? [y/N]: "
 #    read -r answer
 #    if [[ $answer != "y" ]]; then
