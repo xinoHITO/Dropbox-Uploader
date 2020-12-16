@@ -600,6 +600,7 @@ function db_simple_upload_file
         print "DONE\n"
     else
         print "FAILED\n"
+		print "$RESPONSE_FILE"
         print "An error occurred requesting /upload\n"
         ERROR_STATUS=1
     fi
